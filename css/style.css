@@ -29,14 +29,14 @@
   color: var(--light-color) !important;
 }
 
-.bookTable {
-  background: var(--primary-color);
-  color: var(--light-color);
+#nav #navContainer ul li a.bookTable {
+  background: var(--primary-color) !important;
+  color: var(--light-color) !important;
 }
 
-.bookTable:hover {
+#nav #navContainer ul li a.bookTable:hover {
   transition: 0.3s;
-  background: var(--secondary-color);
+  background: var(--secondary-color) !important;
   color: var(--light-color);
 }
 
