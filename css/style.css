@@ -1,0 +1,156 @@
+:root {
+  --primary-color: #3ba3c6;
+  --secondary-color: #c63157;
+  --light-color: #f7f7f7;
+  --dark-color: #1b1a1a;
+}
+
+.logo {
+  width: 8vw;
+  border-radius: 50%;
+}
+
+#nav ul {
+  text-align: center;
+  gap: 1vw;
+}
+
+#nav ul li a {
+  color: var(--light-color) !important;
+  font-weight: 600;
+  transition: 0.3s;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+#nav ul li a:hover {
+  transition: 0.3s;
+  background: var(--primary-color);
+  color: var(--light-color) !important;
+}
+
+.bookTable {
+  background: var(--primary-color);
+  color: var(--light-color);
+}
+
+.bookTable:hover {
+  transition: 0.3s;
+  background: var(--secondary-color);
+  color: var(--light-color);
+}
+
+/* MEDIA SCREEN AND MAX-WIDTH */
+@media only screen and (max-width: 992px) {
+  #nav ul {
+    background: var(--dark-color);
+    float: right;
+    width: 35%;
+  }
+
+  #hero div h1 {
+    margin-top: 10vh;
+  }
+
+  #nav button span {
+    color: var(--light-color);
+  }
+}
+
+#orderBtn {
+  border: none;
+  background: var(--primary-color);
+  color: var(--light-color);
+  margin-bottom: 5vh;
+}
+
+#hero {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../img/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.heroRight img {
+  margin: 0 2vw;
+}
+
+#category {
+  margin-top: 100vh;
+}
+
+#category .row .col {
+  margin-bottom: 4vh;
+  transition: 0.3s;
+}
+#category .row .col:hover {
+  transition: 0.3s;
+  scale: 1.05;
+}
+
+.categoryBtn {
+  background: var(--primary-color);
+  color: var(--light-color);
+  transition: 0.3s;
+}
+.categoryBtn:hover {
+  background: var(--secondary-color);
+  color: var(--light-color);
+  transition: 0.3s;
+}
+#specialTable {
+  background: var(--primary-color);
+  color: var(--light-color);
+}
+
+.getTable {
+  background: var(--secondary-color);
+}
+
+.getTable:hover {
+  background: #a42343;
+}
+#ageInput:focus-visible, #ageInput:focus {
+  border: none !important;
+}
+/* FOOTER STARTS HERE  */
+.footer {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+.footer .container .row .col ul li a {
+  color: var(--light-color);
+}
+.footer .container .row .col ul li {
+  margin-bottom: 1vh;
+}
+/* FOOTER ENDS HERE  */
+
+/* AGE INPUT STARTS HERE  */
+.inputWarning {
+  border: 2px solid red !important;
+}
+.inputWarning::placeholder {
+  color: red;
+}
+.tableStyle {
+  background: var(--primary-color);
+  color: var(--light-color);
+  padding: 1vh;
+  margin: 2vh;
+  padding: 1vh 2vh;
+  border: none;
+  border-radius: 20px;
+}
+/* AGE INPUT ENDS HERE  */
+
