@@ -28,6 +28,7 @@ ageInput.addEventListener('focusout', () => {
             for (let i = 0; i < tables.length; i++) {
                 ageResContainer.innerHTML += `<button class="tableStyle">${tables[i]}</button>`;
             }
+            ageResContainer.classList.remove('inputWarning');
             child.classList.remove('d-none');
             adult.classList.add('d-none');
         } else if (numValue < 100 && numValue >= 18) {
@@ -37,20 +38,26 @@ ageInput.addEventListener('focusout', () => {
             for (let i = 0; i < tables.length; i++) {
                 ageResContainer.innerHTML += `<button class="tableStyle">${tables[i]}</button>`;
             }
+            ageResContainer.classList.remove('inputWarning');
             child.classList.add('d-none');
             adult.classList.remove('d-none');
         } else if (numValue >= 100 && numValue <= 120) {
             ageResHeading.innerHTML = `Enough! You're already ${numValue}`;
             ageResContainer.innerHTML = `We don't allow ${numValue} years old.`;
+            ageResContainer.classList.remove('inputWarning');
             child.classList.add('d-none');
             adult.classList.add('d-none');
         } else if (numValue > 120) {
             ageResHeading.innerHTML = `Don't lie 😂`
             ageResContainer.innerHTML = `Don't lie that you're ${numValue} years old. 😂`;
+            ageResContainer.classList.remove('inputWarning');
             child.classList.add('d-none');
             adult.classList.add('d-none');
         } else {
             ageInput.placeholder = 'Something wrong!';
+            ageResHeading.innerHTML = 'Something wrong!';
+            ageResContainer.innerHTML = 'Something wrong!';
+            ageResContainer.classList.add('inputWarning');
             child.classList.add('d-none');
             adult.classList.add('d-none');
         }
